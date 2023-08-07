@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 2</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+      integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+        body{
+            width: 850px;
+        }
+        #form1,#form2{
+            border: solid 2px black;
+            padding: 20px;
+            width: 650px;
+            
+        }
+        #title{
+            text-align: center;
+            font-weight: bold;
+        }
+        #subtitle{
+            text-align: center;
+        }
+        input#checkout,input#confirmBttn{
+            color: #fff;
+            background-color: black;
+        }
+        input#cancelBttn{
+            color: #fff;
+            background-color: darkred;
+        }
+        .error,.success{
+            color: #fff;
+            text-align: center;
+            font-size: 1.1em;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        .error{
+            background-color: red;
+        }
+        .success{
+            background-color: green;
+        }
+        #customerTable,#receiptTable{
+            border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 1rem;
+        }
+        .tableHeaders{
+            font-weight: bold;
+            text-align: center;
+        }
+        td{
+            text-align: left;
+        padding: 0.1rem;
+        border: 1px solid #ddd; 
+        margin-left: 5px;
+        }
+        tr{
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) td {
+        background-color: #f2f2f2;
+        }
+        #colspan{
+            text-align: right;
+        margin-left: auto;
+        }
+        tr td#total{
+            text-align: right;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">Conestoga Garage Sale</h1>
+
+      <h3 id="subtitle">Raising money for the Frontline Fund</h2>
+
+      <form id="form1">
+        <div class="row">
+            <div class="six columns">
+              <label for="name">Name</label>
+            </div>
+            <div class="six columns">
+              <input type="text" name="" id="name" class="u-full-width" autofocus placeholder="First and Last Name" />
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="six columns">
+              <label for="email">Email</label>
+            </div>
+            <div class="six columns">
+              <input type="email" name="" id="email" class="u-full-width" placeholder="email@domain.com"/>
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="six columns">
+              <label for="creditNumber">Credit Card Number</label>
+            </div>
+            <div class="six columns">
+              <input type="text" name="" id="creditNumber" class="u-full-width" placeholder="XXXX-XXXX-XXXX-XXXX" />
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="six columns">
+              <label for="creditMonth">Credit Card Expiry Month</label>
+            </div>
+            <div class="six columns">
+              <input type="text" name="" id="creditMonth" class="u-full-width" placeholder="MMM" />
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="six columns">
+              <label for="creditYear">Credit Card Expiry Year</label>
+            </div>
+            <div class="six columns">
+              <input type="text" name="" id="creditYear" class="u-full-width" placeholder="yyyy"/>
+            </div>
+          </div>
+    
+          <h3 id="subtitle">Buy generously</h2>
+    
+          <div class="row">
+            <div class="six columns">
+              <label for="pizza">Portion of Pizza ($4)</label>
+            </div>
+            <div class="six columns">
+              <input type="text" name="" id="pizza" class="u-full-width" placeholder="10"/>
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="six columns">
+              <label for="hotdogs">German Hotdogs ($7)</label>
+            </div>
+            <div class="six columns">
+              <input type="text" name="" id="hotdogs" class="u-full-width" placeholder="10"/>
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="six columns">
+              <label for="frozen">Frozen Juice ($5)</label>
+            </div>
+            <div class="six columns">
+              <input type="text" name="" id="frozen" class="u-full-width" placeholder="10"/>
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="six columns">
+              <label for="candy">Candy Cotton ($3)</label>
+            </div>
+            <div class="six columns">
+              <input type="text" name="" id="candy" class="u-full-width" placeholder="10"/>
+            </div>
+          </div>
+
+        <div id="popup"></div>
+        <div id="extra"></div>
+
+        <input
+          type="submit"
+          value="Checkout"
+          class="u-full-width"
+          id="checkout"
+          
+        />
+        <div class="row" id="newBttns">
+            
+        </div>
+      </form>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
